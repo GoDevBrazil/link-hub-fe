@@ -1,20 +1,9 @@
-import * as S from './styles'
-import { MainProps } from './utils'
+import * as S from './Main.styles'
+import { MainProps } from './Main.utils'
 
-const Main = ({
-  title = 'Boilerplate',
-  description = 'TypeScript, ReactJS, NextJS e Styled Components',
-  backgroundColor,
-  textColor
-}: MainProps) => (
+const Main = ({ backgroundColor, textColor, children }: MainProps) => (
   <S.Wrapper backgroundColor={backgroundColor} textColor={textColor}>
-    <S.Logo src="/img/logo.svg" alt="dashboard-logo" />
-    <S.Title>{title}</S.Title>
-    <S.Description>{description}</S.Description>
-    <S.Illustration
-      src="/img/hero-illustration.svg"
-      alt="Um desenvolvedor de frente para uma tela com código"
-    />
+    {children}
   </S.Wrapper>
 )
 

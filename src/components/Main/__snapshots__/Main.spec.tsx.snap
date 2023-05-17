@@ -1,8 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[
-  `<Main /> should render the heading with the default values if no props are passed 1`
-] = `
+exports[`<Main /> should render 1`] = `
 .c0 {
   background-color: #06092b;
   color: #fff;
@@ -27,47 +25,7 @@ exports[
   justify-content: center;
 }
 
-.c1 {
-  width: 25rem;
-  margin-bottom: 2rem;
-}
-
-.c2 {
-  font-size: 2.5rem;
-}
-
-.c3 {
-  font-size: 2.5rem;
-  font-weight: 400;
-}
-
-.c4 {
-  margin-top: 3rem;
-  width: min(30rem,100%);
-}
-
 <main
   class="c0"
->
-  <img
-    alt="dashboard-logo"
-    class="c1"
-    src="/img/logo.svg"
-  />
-  <h1
-    class="c2"
-  >
-    Boilerplate
-  </h1>
-  <h2
-    class="c3"
-  >
-    TypeScript, ReactJS, NextJS e Styled Components
-  </h2>
-  <img
-    alt="Um desenvolvedor de frente para uma tela com código"
-    class="c4"
-    src="/img/hero-illustration.svg"
-  />
-</main>
-`
+/>
+`;

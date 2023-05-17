@@ -11,8 +11,6 @@ type Story = StoryObj<typeof Main>
 
 export const Template: Story = {
   args: {
-    title: 'Title template',
-    description: 'Description template',
     backgroundColor: '#06092b',
     textColor: '#fff'
   }
