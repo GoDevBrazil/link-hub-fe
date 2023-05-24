@@ -1,10 +1,14 @@
+import React from 'react'
+import * as S from './Button.styles'
 import { ButtonProps } from './Button.utils'
 
 const Button = ({ label, type, customStyles }: ButtonProps) => {
+  /* const combinedStyles = { ...S.Button, ...customStyles } */
+
   return (
-    <button type={type} style={customStyles}>
+    <S.Button type={type} style={customStyles}>
       {label}
-    </button>
+    </S.Button>
   )
 }
 
