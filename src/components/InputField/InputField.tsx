@@ -12,7 +12,7 @@ const InputField = ({
   const [value, setValue] = useState('')
   const [touched, setTouched] = useState(false)
   const errorMessage = getFieldError(value, isRequired, options)
-  const displayErrorMessage = (wasSubmitted || touched) && errorMessage
+  const displayErrorMessage = Boolean((wasSubmitted || touched) && errorMessage)
 
   return (
     <S.InputWrapper key={name}>
@@ -24,6 +24,7 @@ const InputField = ({
         onChange={(event) => setValue(event.currentTarget.value)}
         onBlur={() => setTouched(true)}
         required={isRequired}
+        hasError={displayErrorMessage}
       />
       {displayErrorMessage ? (
         <S.ErrorMessage role="alert" id={`${name}-error`}>

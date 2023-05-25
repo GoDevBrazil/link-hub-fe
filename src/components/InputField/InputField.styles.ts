@@ -1,13 +1,15 @@
 import styled from 'styled-components'
 
+type InputStyledProps = {
+  hasError: boolean
+}
+
 export const InputWrapper = styled.div`
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: relative;
-  padding: 5px;
-  border: 2px solid #000;
+  margin-bottom: 30px;
 `
 
 export const Label = styled.label`
@@ -15,11 +17,12 @@ export const Label = styled.label`
   font-weight: 700;
 `
 
-export const Input = styled.input`
+export const Input = styled.input<InputStyledProps>`
   margin: 10px 0 0;
   background-color: #bfbfbf;
-  padding: 6px 8px;
-  border: none;
+  padding: 8px;
+  border: 1px solid transparent;
+  border: 1px solid ${({ hasError }) => (hasError ? 'red' : hasError)};
   border-radius: 4px;
   width: 100%;
 `
@@ -27,5 +30,5 @@ export const Input = styled.input`
 export const ErrorMessage = styled.span`
   color: red;
   align-self: flex-end;
-  margin: 5px 0;
+  margin: 5px 0 0;
 `
