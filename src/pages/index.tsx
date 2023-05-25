@@ -4,7 +4,7 @@ import Main from 'components/Main/Main'
 
 export default function Home() {
   return (
-    <Main textColor="#fff" backgroundColor="#06092b">
+    <Main textColor="#212121" backgroundColor="#EAEAEA">
       <Form fields={SigninFormFields} />
     </Main>
   )

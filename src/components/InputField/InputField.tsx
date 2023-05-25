@@ -15,9 +15,9 @@ const InputField = ({
   const displayErrorMessage = (wasSubmitted || touched) && errorMessage
 
   return (
-    <div key={name}>
-      <label htmlFor={`${name}-input`}>{name}:</label>
-      <input
+    <S.InputWrapper key={name}>
+      <S.Label htmlFor={`${name}-input`}>{name}:</S.Label>
+      <S.Input
         id={`${name}-input`}
         name={name}
         type={type}
@@ -26,11 +26,11 @@ const InputField = ({
         required={isRequired}
       />
       {displayErrorMessage ? (
-        <span role="alert" id={`${name}-error`}>
+        <S.ErrorMessage role="alert" id={`${name}-error`}>
           {errorMessage}
-        </span>
+        </S.ErrorMessage>
       ) : null}
-    </div>
+    </S.InputWrapper>
   )
 }
 

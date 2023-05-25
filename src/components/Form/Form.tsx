@@ -3,6 +3,7 @@ import InputField from 'components/InputField/InputField'
 import Button from 'components/Button/Button'
 // import { getFieldError } from 'components/InputField/InputField.utils'
 import { FormProps } from './Form.utils'
+import * as S from './Form.styles'
 
 const Form = ({ fields }: FormProps) => {
   const [wasSubmitted, setWasSubmitted] = useState(false)
@@ -27,7 +28,7 @@ const Form = ({ fields }: FormProps) => {
   }
 
   return (
-    <form noValidate onSubmit={handleSubmit}>
+    <S.FormWrapper noValidate onSubmit={handleSubmit}>
       {fields.map(({ name, type, isRequired }) => (
         <InputField
           key={name}
@@ -38,7 +39,7 @@ const Form = ({ fields }: FormProps) => {
         />
       ))}
       <Button type="submit" label="Entrar" />
-    </form>
+    </S.FormWrapper>
   )
 }
 
