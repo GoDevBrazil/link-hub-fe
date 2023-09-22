@@ -1,0 +1,36 @@
+<mat-card>
+
+  <mat-card-title>LinkHub</mat-card-title>
+  <mat-card-subtitle>Compartilhe seus links</mat-card-subtitle>
+  <mat-card-content>
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+      <mat-form-field appearance="outline">
+        <mat-label>Informe seu email</mat-label>
+        <input matInput placeholder="kibe@example.com" id="email" formControlName="email" required>
+        <mat-icon matSuffix>mail</mat-icon>
+        <mat-error *ngIf="loginForm.get('email')?.hasError('required')">E-mail deve obrigatório.</mat-error>
+        <mat-error *ngIf="loginForm.get('email')?.hasError('pattern')">E-mail deve válido.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Digite sua senha</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" id="password" formControlName="password" required>
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Senha deve obrigatória.</mat-error>
+        <mat-error *ngIf="loginForm.get('password')?.hasError('pattern')">Senha deve válida.</mat-error>
+      </mat-form-field>
+
+      <button mat-stroked-button color="primary" type="submit" [disabled]="loginForm.invalid">Entrar</button>
+    </form>
+
+  </mat-card-content>
+
+  <mat-card-footer>
+    Ainda não possui conta? <a routerLink="/register">Registre-se</a>
+  </mat-card-footer>
+
+</mat-card>

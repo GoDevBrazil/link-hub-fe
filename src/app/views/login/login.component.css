@@ -1,0 +1,42 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: darkcyan;
+}
+
+mat-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 100%;
+}
+
+mat-card-title, mat-card-subtitle {
+  text-align: center;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+mat-form-field {
+  padding: 5px 0;
+}
+
+mat-card-footer {
+  text-align: center;
+  margin-top: 10px;
+}
