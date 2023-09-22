@@ -1,10 +1,17 @@
-FROM node:16 as node
+FROM node:18 AS build
+
 WORKDIR /app
-COPY . .
+
+COPY package*.json .
 RUN npm install
+
+COPY . .
 RUN npm run build --aot
 
-FROM nginx:1.21
-COPY --from=node /app/dist/link-hub-fe /usr/share/nginx/html
+FROM nginx
+
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d
+COPY --from=build /app/dist/link-hub-fe /usr/share/nginx/html
 
 EXPOSE 80
