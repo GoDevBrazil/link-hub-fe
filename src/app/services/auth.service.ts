@@ -6,13 +6,14 @@ import {AccountResponse} from "../domain/vo/AccountResponse";
 import {Issue} from "../domain/exceptions/Issue";
 import {AuthRequest} from "../domain/vo/AuthRequest";
 import {AuthResponse} from "../domain/vo/AuthResponse";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private baseUrl: string = `http://localhost:8080`;
+  private baseUrl: string = environment.baseUrl;
   private tokenKey: string = 'auth-token';
 
   constructor(private http: HttpClient) { }

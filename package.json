@@ -15,7 +15,8 @@
     "ng g s auth": "ng g s services/auth",
     "ng g s message": "ng g s services/message",
     "ng g guard auth": "ng g guard auth",
-    "ng g m app-routing": "ng generate module app-routing --flat --module=app"
+    "ng g m app-routing": "ng generate module app-routing --flat --module=app",
+    "ng g environments": "ng g environments"
   },
   "private": true,
   "dependencies": {
