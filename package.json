@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --aot",
+    "build": "ng build",
+    "build:ci": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "material": "ng add @angular/material",
