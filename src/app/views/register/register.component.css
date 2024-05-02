@@ -3,14 +3,21 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: darkcyan;
+  background: #F4F5FA;
 }
 
 mat-card {
-  padding: 20px;
+  padding: 60px 30px;
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 420px;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 form {
@@ -23,7 +30,7 @@ input {
 }
 
 mat-card-title, mat-card-subtitle {
-  text-align: center;
+  /*text-align: center;*/
 }
 
 mat-card-content {
@@ -39,4 +46,27 @@ mat-form-field {
 mat-card-footer {
   text-align: center;
   margin-top: 10px;
+}
+
+.btn-lh-primary {
+  background: #9055fd;
+  color: #FFF;
+  border-color: #9055fd;
+}
+
+.btn-lh-primary:hover {
+  background: #804BE0;
+  border-color: #804BE0;
+  color: #FFF;
+}
+
+.btn-lh-primary:not(:disabled) {
+  background: #9055fd;
+  color: #FFF;
+  border-color: #9055fd;
+}
+
+mat-card-footer a {
+  color: #9b66fd;
+  text-decoration: none;
 }
