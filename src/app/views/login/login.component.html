@@ -1,7 +1,7 @@
 <mat-card>
-
-  <mat-card-title>LinkHub</mat-card-title>
-  <mat-card-subtitle>Compartilhe seus links</mat-card-subtitle>
+  <span class="logo">LinkHub</span>
+  <mat-card-title>Bom-vindo ao LinkHub</mat-card-title>
+  <mat-card-subtitle>Preencha suas credenciais abaixo para acessar o sistema</mat-card-subtitle>
   <mat-card-content>
 
     <form [formGroup]="loginForm" (ngSubmit)="login()">
@@ -24,7 +24,7 @@
         <mat-error *ngIf="loginForm.get('password')?.hasError('pattern')">Senha deve válida.</mat-error>
       </mat-form-field>
 
-      <button mat-stroked-button color="primary" type="submit" [disabled]="loginForm.invalid">Entrar</button>
+      <button mat-flat-button type="submit" class="btn-lh-primary" [disabled]="loginForm.invalid">Entrar</button>
     </form>
 
   </mat-card-content>
